@@ -7,7 +7,7 @@
                             <label class="col-form-label">Select the race you want to view</label>
                             <select name="race" class="form-control mb-2 mr-sm-2">
                                 {% for index,row in race_details.iterrows() %}
-                                    <option value="{{row.raceid}}">{{row.race}}</option>
+                                    <option value="{{row.raceId}}">{{row.Race}}</option>
                                 {% endfor %}
                             </select>
 
@@ -38,8 +38,8 @@
 
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <h4 class="text-center">{{races.Race_Name['race_year'][0] | string + ' ' +  races.Race_Name['race'][0]}}</h4>
-                            <h5 class="text-center">{{races.Race_Name['circuit'][0]}}</h5>
+                            <h4 class="text-center">{{races.Race_Name['race_year'][0] | string + ' ' +  races.Race_Name['Race'][0]}}</h4>
+                            <h5 class="text-center">{{races.Race_Name['Circuit'][0]}}</h5>
                           <div class="tab-pane container active" id="results">
 
                               <table class="table">
@@ -55,11 +55,11 @@
                                     <tbody>
                                         {% for index,row in races.Results.iterrows() %}
                                             <tr>
-                                                <td>{{row.position}}</td>
-                                                <td>{{row.driver}}</td>
-                                                <td>{{row.team}}</td>
-                                                <td>{{row.points}}</td>
-                                                <td>{{row.status}}
+                                                <td>{{row.Position}}</td>
+                                                <td>{{row.Driver}}</td>
+                                                <td>{{row.Team}}</td>
+                                                <td>{{row.Points}}</td>
+                                                <td>{{row.Status}}
                                                 </td>
                                             </tr>
                                         {% endfor %}
